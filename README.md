@@ -1,2 +1,2 @@
 # LLAuth
-Minecraft authentication plugin for use with LotteLink
+Minecraft authentication plugin for use with LotteLink.
