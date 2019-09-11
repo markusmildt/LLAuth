@@ -13,8 +13,7 @@ public class Main extends ListenerAdapter {
         builder.setToken("NjE4OTY1NDI0MzI3MDk4Mzcw.XXBXsA.oC2L7WaEjMYOeoKXr7zoyeqbuvw"); //setting token
         builder.addEventListeners(new Main());
         builder.build();
-
-        sqlConnect(); //connecting to the SQLite database
+        
 
         //get auth code - auth
     }
@@ -43,28 +42,6 @@ public class Main extends ListenerAdapter {
         if(event.getMessage().getContentRaw().equalsIgnoreCase("ll.help")){
             event.getChannel().sendMessage(event.getAuthor().getAsMention() + "\n**AuthBot Commands:** \n*ll.verify:* receive your verification code" +
                     "\n*test:* a temporary test command").queue();
-        }
-    }
-
-
-    //handles connecting to the SQLite database
-    public static void sqlConnect(){
-        Connection conn = null;
-        try{
-            String url = "url"; //place SQLite url here
-
-            conn = DriverManager.getConnection(url);
-            System.out.println("Established connection to url " + url);
-        } catch(SQLException e){
-            System.out.println(e.getMessage());
-        } finally{
-            try{
-                if(conn != null){
-                    conn.close();
-                }
-            } catch(SQLException e){
-                System.out.println(e.getMessage());
-            }
         }
     }
 }
