@@ -10,7 +10,7 @@ import java.sql.*;
 public class Main extends ListenerAdapter {
     public static void main(String[] args) throws LoginException {
         JDABuilder builder = new JDABuilder(AccountType.BOT);
-        builder.setToken("NjE4OTY1NDI0MzI3MDk4Mzcw.XXBXsA.oC2L7WaEjMYOeoKXr7zoyeqbuvw"); //setting token
+        builder.setToken(""); //setting token
         builder.addEventListeners(new Main());
         builder.build();
         
